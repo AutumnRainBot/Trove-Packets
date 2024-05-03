@@ -131,6 +131,8 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
             OutputPacketText(InjectedBuffer);
         }
         */
+
+
         if (lpBuffers[0].len> 200) //
         {
             OutputPacketText("=======================================\n");
@@ -163,20 +165,19 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
         
     }
 
-
     if (BlockPacketToggle == false) {
-        if (lpBuffers[0].len >= InjectedLen && InjectedLen != 0) //if packet size is greater than our packet and is not empty then we inject
-        {
+        if (lpBuffers[0].len >= InjectedLen && InjectedLen != 0) { //if packet size is greater than our packet and is not empty then we inject
             lpBuffers[0].len = InjectedLen;
             lpBuffers[0].buf = const_cast<char*>(InjectedBuffer);
             InjectedLen = 0;
-            OutputPacketText("");
+            OutputPacketText("Found a packet to inject in !");
         }
+
         result = pWsaSend(s, lpBuffers, dwBufferCount, lpNumberOfBytesSent, dwFlags, lpOverlapped, lpCompletionRoutine);
+        return result;
     }
 
-
-    return result;
+    
 }
 
 // For sendto() hook it to read the buffer and print it
