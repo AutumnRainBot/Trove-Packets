@@ -1,0 +1,13 @@
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\imgui\imgui.cpp;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\imgui.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\imgui\imgui_demo.cpp;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\imgui_demo.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\imgui\imgui_draw.cpp;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\imgui_draw.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\imgui\imgui_impl_dx11.cpp;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\imgui_impl_dx11.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\imgui\imgui_impl_win32.cpp;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\imgui_impl_win32.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\imgui\imgui_widgets.cpp;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\imgui_widgets.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\kiero\kiero.cpp;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\kiero.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\buffer.c;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\buffer.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\hde\hde32.c;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\hde32.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\hde\hde64.c;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\hde64.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\hook.c;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\hook.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\trampoline.c;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\trampoline.obj
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp;C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\Debug\main.obj

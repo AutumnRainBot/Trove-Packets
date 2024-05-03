@@ -1,0 +1,892 @@
+﻿  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58160,1):
+  voir la définition précédente de 'DXGI_STATUS_OCCLUDED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58169,1):
+  voir la définition précédente de 'DXGI_STATUS_CLIPPED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58178,1):
+  voir la définition précédente de 'DXGI_STATUS_NO_REDIRECTION'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58187,1):
+  voir la définition précédente de 'DXGI_STATUS_NO_DESKTOP_ACCESS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58196,1):
+  voir la définition précédente de 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58205,1):
+  voir la définition précédente de 'DXGI_STATUS_MODE_CHANGED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58214,1):
+  voir la définition précédente de 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58229,1):
+  voir la définition précédente de 'DXGI_ERROR_INVALID_CALL'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58238,1):
+  voir la définition précédente de 'DXGI_ERROR_NOT_FOUND'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58247,1):
+  voir la définition précédente de 'DXGI_ERROR_MORE_DATA'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58256,1):
+  voir la définition précédente de 'DXGI_ERROR_UNSUPPORTED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58265,1):
+  voir la définition précédente de 'DXGI_ERROR_DEVICE_REMOVED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58274,1):
+  voir la définition précédente de 'DXGI_ERROR_DEVICE_HUNG'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58284,1):
+  voir la définition précédente de 'DXGI_ERROR_DEVICE_RESET'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58293,1):
+  voir la définition précédente de 'DXGI_ERROR_WAS_STILL_DRAWING'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58303,1):
+  voir la définition précédente de 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58312,1):
+  voir la définition précédente de 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58322,1):
+  voir la définition précédente de 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58331,1):
+  voir la définition précédente de 'DXGI_ERROR_NONEXCLUSIVE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58340,1):
+  voir la définition précédente de 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58350,1):
+  voir la définition précédente de 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58359,1):
+  voir la définition précédente de 'DXGI_ERROR_REMOTE_OUTOFMEMORY'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58665,1):
+  voir la définition précédente de 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58674,1):
+  voir la définition précédente de 'D3D11_ERROR_FILE_NOT_FOUND'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58684,1):
+  voir la définition précédente de 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58693,1):
+  voir la définition précédente de 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58641,1):
+  voir la définition précédente de 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+  (compiler le fichier source 'imgui/imgui_impl_dx11.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58650,1):
+  voir la définition précédente de 'D3D10_ERROR_FILE_NOT_FOUND'
+  
+  imgui_impl_win32.cpp
+  imgui_widgets.cpp
+  kiero.cpp
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58160,1):
+  voir la définition précédente de 'DXGI_STATUS_OCCLUDED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58169,1):
+  voir la définition précédente de 'DXGI_STATUS_CLIPPED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58178,1):
+  voir la définition précédente de 'DXGI_STATUS_NO_REDIRECTION'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58187,1):
+  voir la définition précédente de 'DXGI_STATUS_NO_DESKTOP_ACCESS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58196,1):
+  voir la définition précédente de 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58205,1):
+  voir la définition précédente de 'DXGI_STATUS_MODE_CHANGED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58214,1):
+  voir la définition précédente de 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58229,1):
+  voir la définition précédente de 'DXGI_ERROR_INVALID_CALL'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58238,1):
+  voir la définition précédente de 'DXGI_ERROR_NOT_FOUND'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58247,1):
+  voir la définition précédente de 'DXGI_ERROR_MORE_DATA'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58256,1):
+  voir la définition précédente de 'DXGI_ERROR_UNSUPPORTED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58265,1):
+  voir la définition précédente de 'DXGI_ERROR_DEVICE_REMOVED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58274,1):
+  voir la définition précédente de 'DXGI_ERROR_DEVICE_HUNG'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58284,1):
+  voir la définition précédente de 'DXGI_ERROR_DEVICE_RESET'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58293,1):
+  voir la définition précédente de 'DXGI_ERROR_WAS_STILL_DRAWING'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58303,1):
+  voir la définition précédente de 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58312,1):
+  voir la définition précédente de 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58322,1):
+  voir la définition précédente de 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58331,1):
+  voir la définition précédente de 'DXGI_ERROR_NONEXCLUSIVE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58340,1):
+  voir la définition précédente de 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58350,1):
+  voir la définition précédente de 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58359,1):
+  voir la définition précédente de 'DXGI_ERROR_REMOTE_OUTOFMEMORY'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58665,1):
+  voir la définition précédente de 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58674,1):
+  voir la définition précédente de 'D3D11_ERROR_FILE_NOT_FOUND'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58684,1):
+  voir la définition précédente de 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58693,1):
+  voir la définition précédente de 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58641,1):
+  voir la définition précédente de 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+  (compiler le fichier source 'kiero/kiero.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58650,1):
+  voir la définition précédente de 'D3D10_ERROR_FILE_NOT_FOUND'
+  
+  main.cpp
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58160,1):
+  voir la définition précédente de 'DXGI_STATUS_OCCLUDED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58169,1):
+  voir la définition précédente de 'DXGI_STATUS_CLIPPED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58178,1):
+  voir la définition précédente de 'DXGI_STATUS_NO_REDIRECTION'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58187,1):
+  voir la définition précédente de 'DXGI_STATUS_NO_DESKTOP_ACCESS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58196,1):
+  voir la définition précédente de 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58205,1):
+  voir la définition précédente de 'DXGI_STATUS_MODE_CHANGED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58214,1):
+  voir la définition précédente de 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58229,1):
+  voir la définition précédente de 'DXGI_ERROR_INVALID_CALL'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58238,1):
+  voir la définition précédente de 'DXGI_ERROR_NOT_FOUND'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58247,1):
+  voir la définition précédente de 'DXGI_ERROR_MORE_DATA'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58256,1):
+  voir la définition précédente de 'DXGI_ERROR_UNSUPPORTED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58265,1):
+  voir la définition précédente de 'DXGI_ERROR_DEVICE_REMOVED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58274,1):
+  voir la définition précédente de 'DXGI_ERROR_DEVICE_HUNG'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58284,1):
+  voir la définition précédente de 'DXGI_ERROR_DEVICE_RESET'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58293,1):
+  voir la définition précédente de 'DXGI_ERROR_WAS_STILL_DRAWING'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58303,1):
+  voir la définition précédente de 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58312,1):
+  voir la définition précédente de 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58322,1):
+  voir la définition précédente de 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58331,1):
+  voir la définition précédente de 'DXGI_ERROR_NONEXCLUSIVE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58340,1):
+  voir la définition précédente de 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58350,1):
+  voir la définition précédente de 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58359,1):
+  voir la définition précédente de 'DXGI_ERROR_REMOTE_OUTOFMEMORY'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58665,1):
+  voir la définition précédente de 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58674,1):
+  voir la définition précédente de 'D3D11_ERROR_FILE_NOT_FOUND'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58684,1):
+  voir la définition précédente de 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58693,1):
+  voir la définition précédente de 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58641,1):
+  voir la définition précédente de 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+  
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\winerror.h(58650,1):
+  voir la définition précédente de 'D3D10_ERROR_FILE_NOT_FOUND'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(103,1): warning C4005: 'AF_IPX' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(457,1):
+  voir la définition précédente de 'AF_IPX'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(147,1): warning C4005: 'AF_MAX' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(476,1):
+  voir la définition précédente de 'AF_MAX'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(187,1): warning C4005: 'SO_DONTLINGER' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(399,1):
+  voir la définition précédente de 'SO_DONTLINGER'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(240,25): error C2011: 'sockaddr' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(482,8):
+  voir la déclaration de 'sockaddr'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(442,5): error C2143: erreur de syntaxe : absence de '}' avant 'constante'
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(442,5): error C2059: erreur de syntaxe : 'constante'
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(496,1): error C2143: erreur de syntaxe : absence de ';' avant '}'
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(496,10): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(496,20): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(577,1): warning C4005: 'IN_CLASSA' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(284,1):
+  voir la définition précédente de 'IN_CLASSA'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(583,1): warning C4005: 'IN_CLASSB' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(290,1):
+  voir la définition précédente de 'IN_CLASSB'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(589,1): warning C4005: 'IN_CLASSC' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(296,1):
+  voir la définition précédente de 'IN_CLASSC'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(600,1): warning C4005: 'INADDR_ANY' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(301,1):
+  voir la définition précédente de 'INADDR_ANY'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(602,1): warning C4005: 'INADDR_BROADCAST' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(303,1):
+  voir la définition précédente de 'INADDR_BROADCAST'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(638,28): error C2011: 'sockaddr_in' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(309,8):
+  voir la déclaration de 'sockaddr_in'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(136,23): error C2011: 'fd_set' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(65,16):
+  voir la déclaration de 'fd_set'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(171,1): warning C4005: 'FD_SET' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(99,1):
+  voir la définition précédente de 'FD_SET'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(180,16): error C2011: 'timeval' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(108,8):
+  voir la déclaration de 'timeval'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(236,17): error C2011: 'hostent' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(164,9):
+  voir la déclaration de 'hostent'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(249,16): error C2011: 'netent' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(177,9):
+  voir la déclaration de 'netent'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(256,17): error C2011: 'servent' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(184,9):
+  voir la déclaration de 'servent'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(268,18): error C2011: 'protoent' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(196,9):
+  voir la déclaration de 'protoent'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(364,24): error C2011: 'WSAData' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(319,16):
+  voir la déclaration de 'WSAData'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(462,18): error C2011: 'sockproto' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(491,8):
+  voir la déclaration de 'sockproto'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(504,16): error C2011: 'linger' : redéfinition du type 'struct'
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(528,9):
+  voir la déclaration de 'linger'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(517,1): warning C4005: 'SOMAXCONN' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(541,1):
+  voir la définition précédente de 'SOMAXCONN'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(551,1): warning C4005: 'FD_READ' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(559,1):
+  voir la définition précédente de 'FD_READ'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(554,1): warning C4005: 'FD_WRITE' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(560,1):
+  voir la définition précédente de 'FD_WRITE'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(557,1): warning C4005: 'FD_OOB' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(561,1):
+  voir la définition précédente de 'FD_OOB'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(560,1): warning C4005: 'FD_ACCEPT' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(562,1):
+  voir la définition précédente de 'FD_ACCEPT'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(563,1): warning C4005: 'FD_CONNECT' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(563,1):
+  voir la définition précédente de 'FD_CONNECT'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(566,1): warning C4005: 'FD_CLOSE' : redéfinition de macro
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(564,1):
+  voir la définition précédente de 'FD_CLOSE'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1631,1): error C2375: 'accept' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(739,19):
+  voir la déclaration de 'accept'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1653,1): error C2375: 'bind' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(744,16):
+  voir la déclaration de 'bind'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1674,1): error C2375: 'closesocket' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(749,16):
+  voir la déclaration de 'closesocket'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1691,1): error C2375: 'connect' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(751,16):
+  voir la déclaration de 'connect'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1712,1): error C2375: 'ioctlsocket' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(756,16):
+  voir la déclaration de 'ioctlsocket'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1735,1): error C2375: 'getpeername' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(761,16):
+  voir la déclaration de 'getpeername'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1756,1): error C2375: 'getsockname' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(766,16):
+  voir la déclaration de 'getsockname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1777,1): error C2375: 'getsockopt' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(771,16):
+  voir la déclaration de 'getsockopt'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1802,1): error C2375: 'htonl' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(778,19):
+  voir la déclaration de 'htonl'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1819,1): error C2375: 'htons' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(780,20):
+  voir la déclaration de 'htons'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1837,1): error C2375: 'inet_addr' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(782,26):
+  voir la déclaration de 'inet_addr'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1855,1): error C2375: 'inet_ntoa' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(784,23):
+  voir la déclaration de 'inet_ntoa'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1955,1): error C2375: 'listen' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(786,16):
+  voir la déclaration de 'listen'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1974,1): error C2375: 'ntohl' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(790,19):
+  voir la déclaration de 'ntohl'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(1991,1): error C2375: 'ntohs' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(792,20):
+  voir la déclaration de 'ntohs'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2008,1): error C2375: 'recv' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(794,16):
+  voir la déclaration de 'recv'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2031,1): error C2375: 'recvfrom' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(800,16):
+  voir la déclaration de 'recvfrom'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2058,1): error C2375: 'select' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(808,16):
+  voir la déclaration de 'select'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2083,1): error C2375: 'send' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(815,16):
+  voir la déclaration de 'send'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2106,1): error C2375: 'sendto' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(821,16):
+  voir la déclaration de 'sendto'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2133,1): error C2375: 'setsockopt' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(829,16):
+  voir la déclaration de 'setsockopt'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2158,1): error C2375: 'shutdown' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(836,16):
+  voir la déclaration de 'shutdown'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2178,1): error C2375: 'socket' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(840,19):
+  voir la déclaration de 'socket'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2203,1): error C2375: 'gethostbyaddr' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(847,33):
+  voir la déclaration de 'gethostbyaddr'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2225,1): error C2375: 'gethostbyname' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(852,33):
+  voir la déclaration de 'gethostbyname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2242,1): error C2375: 'gethostname' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(854,16):
+  voir la déclaration de 'gethostname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2282,1): error C2375: 'getservbyport' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(858,33):
+  voir la déclaration de 'getservbyport'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2301,1): error C2375: 'getservbyname' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(862,33):
+  voir la déclaration de 'getservbyname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2320,1): error C2375: 'getprotobynumber' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(866,34):
+  voir la déclaration de 'getprotobynumber'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2337,1): error C2375: 'getprotobyname' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(868,34):
+  voir la déclaration de 'getprotobyname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2357,1): error C2375: 'WSAStartup' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(872,16):
+  voir la déclaration de 'WSAStartup'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2377,1): error C2375: 'WSACleanup' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(876,16):
+  voir la déclaration de 'WSACleanup'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2394,1): error C2375: 'WSASetLastError' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(878,17):
+  voir la déclaration de 'WSASetLastError'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2411,1): error C2375: 'WSAGetLastError' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(880,16):
+  voir la déclaration de 'WSAGetLastError'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2432,1): error C2375: 'WSAIsBlocking' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(882,17):
+  voir la déclaration de 'WSAIsBlocking'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2450,1): error C2375: 'WSAUnhookBlockingHook' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(884,16):
+  voir la déclaration de 'WSAUnhookBlockingHook'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2468,1): error C2375: 'WSASetBlockingHook' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(886,20):
+  voir la déclaration de 'WSASetBlockingHook'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2486,1): error C2375: 'WSACancelBlockingCall' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(888,16):
+  voir la déclaration de 'WSACancelBlockingCall'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2504,1): error C2375: 'WSAAsyncGetServByName' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(890,19):
+  voir la déclaration de 'WSAAsyncGetServByName'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2532,1): error C2375: 'WSAAsyncGetServByPort' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(898,19):
+  voir la déclaration de 'WSAAsyncGetServByPort'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2560,1): error C2375: 'WSAAsyncGetProtoByName' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(906,19):
+  voir la déclaration de 'WSAAsyncGetProtoByName'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2586,1): error C2375: 'WSAAsyncGetProtoByNumber' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(913,19):
+  voir la déclaration de 'WSAAsyncGetProtoByNumber'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2612,1): error C2375: 'WSAAsyncGetHostByName' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(920,19):
+  voir la déclaration de 'WSAAsyncGetHostByName'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2638,1): error C2375: 'WSAAsyncGetHostByAddr' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(927,19):
+  voir la déclaration de 'WSAAsyncGetHostByAddr'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2668,1): error C2375: 'WSACancelAsyncRequest' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(936,16):
+  voir la déclaration de 'WSACancelAsyncRequest'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(2686,1): error C2375: 'WSAAsyncSelect' : redéfinition ; liaison différente
+  (compiler le fichier source 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(938,16):
+  voir la déclaration de 'WSAAsyncSelect'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(4318,1): error C2059: erreur de syntaxe : '}'
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(4318,1): error C2143: erreur de syntaxe : absence de ';' avant '}'
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_new.h(17,14): error C2143: erreur de syntaxe : absence de ';' avant '{'
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_new.h(17,14): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xmemory(1576,74): error C3861: 'nothrow' : identificateur introuvable
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xmemory(1580,47): error C3861: 'nothrow' : identificateur introuvable
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xmemory(1576,74): error C2065: 'nothrow' : identificateur non déclaré
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xmemory(1580,47): error C2065: 'nothrow' : identificateur non déclaré
+  (compiler le fichier source 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xpolymorphic_allocator.h(137,22): error C2665: 'operator new' : aucune fonction surchargée n’a pu convertir tous les types d’arguments.
+  (compiler le fichier source 'main.cpp')
+  C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\predefined C++ types (compiler internal)(36,23):
+  est peut-être 'void *operator new(size_t,std::align_val_t)'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xpolymorphic_allocator.h(137,22):
+  	'void *operator new(size_t,std::align_val_t)' : impossible de convertir l'argument 2 de 'void *' en 'std::align_val_t'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xpolymorphic_allocator.h(137,43):
+  		Aucun contexte dans lequel cette conversion est possible
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xpolymorphic_allocator.h(137,22):
+  lors de la tentative de mise en correspondance de la liste des arguments '(const size_t, void *)'
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(12,1): warning C4005: 'WSAAPI' : redéfinition de macro
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock2.h(823,1):
+  voir la définition précédente de 'WSAAPI'
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(24,20): error C2079: 'clientService' utilise une struct de 'sockaddr_in' non défini
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(190,35): error C2027: utilisation du type non défini 'sockaddr_in'
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(309,8):
+  voir la déclaration de 'sockaddr_in'
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(196,42): error C2027: utilisation du type non défini 'sockaddr_in'
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(309,8):
+  voir la déclaration de 'sockaddr_in'
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(196,19): error C2440: 'static_cast' : impossible de convertir de 'u_short (__stdcall *)(u_short)' en 'int'
+  C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(196,19):
+  Aucun contexte dans lequel cette conversion est possible
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(233,31): error C2027: utilisation du type non défini 'sockaddr_in'
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(309,8):
+  voir la déclaration de 'sockaddr_in'
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(239,35): error C2027: utilisation du type non défini 'sockaddr_in'
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(309,8):
+  voir la déclaration de 'sockaddr_in'
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(239,12): error C2440: 'static_cast' : impossible de convertir de 'u_short (__stdcall *)(u_short)' en 'int'
+  C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(239,12):
+  Aucun contexte dans lequel cette conversion est possible
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(242,26): error C2568: '=' : impossible de résoudre la surcharge de fonction
+  C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(242,26):
+  est peut-être 'u_long htonl(u_long)'
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(245,30): error C2264: 'inet_ntoa' : erreur dans la définition ou la déclaration de la fonction ; fonction non appelée
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(254,43): error C2027: utilisation du type non défini 'sockaddr_in'
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(309,8):
+  voir la déclaration de 'sockaddr_in'
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(341,24): warning C4302: 'cast de type' : troncation de 'const char *' à 'char'
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(353,23): warning C4302: 'cast de type' : troncation de 'const char *' à 'char'
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(383,28): error C2568: '=' : impossible de résoudre la surcharge de fonction
+  C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(383,28):
+  est peut-être 'SOCKET socket(int,int,int)'
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(408,27): error C2440: 'initialisation' : impossible de convertir de 'SOCKET (__stdcall *)(int,int,int)' en 'SOCKET'
+  C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(408,27):
+  Aucun contexte dans lequel cette conversion est possible
+  
+C:\Users\Amri\Desktop\ImGui-DirectX-11-Kiero-Hook-master\ImGui DirectX 11 Kiero Hook\main.cpp(409,18): error C2079: 'RecvAddr' utilise une struct de 'sockaddr_in' non défini
