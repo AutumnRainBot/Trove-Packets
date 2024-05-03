@@ -58,14 +58,12 @@ ID3D11RenderTargetView* mainRenderTargetView;
 static char Input[10000] = "Enter your packet here :p";;
 static char Output[10000] = "Packets will be displayed here :p";
 
-
 //Toggles
 bool SendToggle = false;
 bool SendToToggle = false;
 bool WSASendToggle = true;
 bool BlockPacketToggle = false;
 bool TranslateToAOB = false;
-
 
 void InitImGui()
 {
@@ -116,16 +114,23 @@ int WSAAPI MySend(SOCKET s, const char* buf, int len, int flags)
     return result;
 }
 
+
+char InjectedBuffer[5000] = "";
+int InjectedLen = 0;
+
 //For WSASEnd() hook it to read the buffer and print it                    
 int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD lpNumberOfBytesSent, LPDWORD dwFlags, LPWSAOVERLAPPED lpOverlapped, LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine)
 {
-    int result = 1;
-    if (BlockPacketToggle == false)
-    {
-        result = pWsaSend(s, lpBuffers, dwBufferCount, lpNumberOfBytesSent, dwFlags, lpOverlapped, lpCompletionRoutine);
-    }
+    int result = 0;
+    
 
     if (WSASendToggle == true) {
+
+        /*
+        if (InjectedBuffer != "") {
+            OutputPacketText(InjectedBuffer);
+        }
+        */
         if (lpBuffers[0].len> 200) //
         {
             OutputPacketText("=======================================\n");
@@ -155,7 +160,21 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
 
             OutputPacketText("\n");
         }
+        
     }
+
+
+    if (BlockPacketToggle == false) {
+        if (lpBuffers[0].len >= InjectedLen && InjectedLen != 0) //if packet size is greater than our packet and is not empty then we inject
+        {
+            lpBuffers[0].len = InjectedLen;
+            lpBuffers[0].buf = const_cast<char*>(InjectedBuffer);
+            InjectedLen = 0;
+            OutputPacketText("");
+        }
+        result = pWsaSend(s, lpBuffers, dwBufferCount, lpNumberOfBytesSent, dwFlags, lpOverlapped, lpCompletionRoutine);
+    }
+
 
     return result;
 }
@@ -328,8 +347,34 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 
 			// Send packet button
 			if (ImGui::Button("Send packet")) {
-				
-                OutputPacketText("Appent");
+                if (WSASendToggle) {
+                    char TempPacket[5000];
+                    strcpy(TempPacket,Input);//We take our input and we put in out TempPacket
+
+                    //Translate from aob packet to its original form
+                    if (TranslateToAOB) {
+                        std::string inputText(TempPacket);
+                        inputText.erase(std::remove_if(inputText.begin(), inputText.end(), ::isspace), inputText.end());
+                        std::string asciiText;
+                        for (size_t i = 0; i < inputText.length(); i += 2) {
+                            std::string hexValue = inputText.substr(i, 2);
+                            char asciiChar = static_cast<char>(std::stoi(hexValue, nullptr, 16));
+                            asciiText += asciiChar;
+                        }
+                        const char* finaltest = asciiText.c_str();
+                        strcpy(TempPacket, finaltest);
+                    }
+
+                    //packet injecting logic
+                    const char* sendData = TempPacket;
+                    int sendDataLength = strlen(sendData);
+
+                    //On finished preparing we inject
+                    strcpy(InjectedBuffer, sendData);
+                    InjectedLen = sendDataLength;
+                    OutputPacketText("Injected packet successfully !");
+                }
+
 			}
 
 			
