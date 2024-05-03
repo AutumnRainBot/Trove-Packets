@@ -44,6 +44,7 @@ int TO_PORT;
 PCSTR WSA_TO_SERVER_IP = "";
 int WSA_TO_PORT;
 
+static int FilterPacketSize = 100; //default size x)
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -133,7 +134,7 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
         */
 
 
-        if (lpBuffers[0].len> 200) //
+        if (lpBuffers[0].len> FilterPacketSize) //Display packet filtered
         {
             OutputPacketText("=======================================\n");
             OutputPacketText("WSASend() Sent Data : \n");
@@ -338,6 +339,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 			if (ImGui::Button("Clear output")) {
 				memset(Output, 0, sizeof(Output));
 			}
+            ImGui::SliderInt("Filter", &FilterPacketSize, 1, 700);
 		}
 
 		//Input packet
