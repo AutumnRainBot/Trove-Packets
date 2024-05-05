@@ -134,27 +134,27 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
                 lpBuffers[0].len = strlen(InjectedBuffer);
                 lpBuffers[0].buf = InjectedBuffer;
 
-                const char* bufferContentt = reinterpret_cast<const char*>(InjectedBuffer);
-                for (DWORD j = 0; j < strlen(InjectedBuffer); ++j)
-                {
-                    char hex[4];
-                    if (bufferContentt[j] == 'G' && bufferContentt[j + 1] == 'G') {
-                        sprintf_s(hex, "%02X ", 0);  // Replace "GG" with null byte
-                        j++; // Skip the next character ('G')
-                    }
-                    else {
-                        sprintf_s(hex, "%02X ", static_cast<unsigned char>(bufferContentt[j]));
-                    }
-                    OutputPacketText(hex);
-                }
+                //debug , 7 FREAKING HOURS FIXING A TYPE CONVERSION BUG OMG
 
+                /*
+                    const char* bufferContentt = reinterpret_cast<const char*>(InjectedBuffer);
+                    for (DWORD j = 0; j < strlen(InjectedBuffer); ++j)
+                    {
+                        char hex[4];
+                        if (bufferContentt[j] == 'G' && bufferContentt[j + 1] == 'G') {
+                            sprintf_s(hex, "%02X ", 0);  // Replace "GG" with null byte
+                            j++; // Skip the next character ('G')
+                        }
+                        else {
+                            sprintf_s(hex, "%02X ", static_cast<unsigned char>(bufferContentt[j]));
+                        }
+                        OutputPacketText(hex);
+                    }
+                */
                 OutputPacketText("\n");
                 Injected = false;
+                
             }
-
-
-
-
 
             OutputPacketText("=======================================\n");
             OutputPacketText("WSASend() Sent Data : \n");
@@ -370,7 +370,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
                 if (WSASendToggle) {
                     char TempPacket[50000];
                     strcpy(TempPacket,Input);//We take our input and we put in out TempPacket
-                    strcpy(Output, Input);//Here the packet has not probleme
+                    //strcpy(Output, Input);//Here the packet has not probleme (debug)
 
 
                     //Translate from aob packet to its original form
