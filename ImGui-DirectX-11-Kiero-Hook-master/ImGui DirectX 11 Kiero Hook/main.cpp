@@ -93,7 +93,7 @@ int WSAAPI MySend(SOCKET s, const char* buf, int len, int flags)
 {
     int result = pSend(s, buf, len, flags);
     // Check if it's checked
-    if (SendToggle == true) {
+    if (SendToggle == true && len >= FilterPacketSize) {
         OutputPacketText("=======================================\n");
         OutputPacketText("Send() Sent Data : \n");
 
@@ -205,7 +205,7 @@ int WSAAPI MySendTo(SOCKET s, const char* buf, int len, int flags, const struct 
     int result = pSendTo(s, buf, len, flags, to, tolen);
 
     // Check if it's checked
-    if (SendToToggle == true) {
+    if (SendToToggle == true && len >= FilterPacketSize) {
         OutputPacketText("=======================================\n");
         // Extracting the IP and port of the receiver
         const sockaddr_in* clientService = reinterpret_cast<const sockaddr_in*>(to);
