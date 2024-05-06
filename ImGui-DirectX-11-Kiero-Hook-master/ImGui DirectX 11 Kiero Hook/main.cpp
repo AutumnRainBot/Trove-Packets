@@ -69,7 +69,6 @@ bool BlockPacketToggle = false;
 bool TranslateToAOB = true;
 bool Injected = false;
 
-
 void InitImGui()
 {
 	ImGui::CreateContext();
@@ -124,41 +123,22 @@ static char InjectedBuffer[50000] = "";
 //For WSASEnd() hook it to read the buffer and print it                    
 int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD lpNumberOfBytesSent, LPDWORD dwFlags, LPWSAOVERLAPPED lpOverlapped, LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine)
 {
+    int result;
     if (WSASendToggle == true) {
 
         if (lpBuffers[0].len>= FilterPacketSize) //Display packet filtered
         {
-            if (Injected) { //if packet size is greater than our packet and is not empty then we inject
-
+            if (Injected && lpBuffers[0].len >= strlen(InjectedBuffer)) { //if packet size is greater than our packet and is not empty then we inject
                 OutputPacketText("Found a packet to inject in !\n");
                 lpBuffers[0].len = strlen(InjectedBuffer);
                 lpBuffers[0].buf = InjectedBuffer;
-
-                //debug , 7 FREAKING HOURS FIXING A TYPE CONVERSION BUG OMG
-
-                /*
-                    const char* bufferContentt = reinterpret_cast<const char*>(InjectedBuffer);
-                    for (DWORD j = 0; j < strlen(InjectedBuffer); ++j)
-                    {
-                        char hex[4];
-                        if (bufferContentt[j] == 'G' && bufferContentt[j + 1] == 'G') {
-                            sprintf_s(hex, "%02X ", 0);  // Replace "GG" with null byte
-                            j++; // Skip the next character ('G')
-                        }
-                        else {
-                            sprintf_s(hex, "%02X ", static_cast<unsigned char>(bufferContentt[j]));
-                        }
-                        OutputPacketText(hex);
-                    }
-                */
                 OutputPacketText("\n");
                 Injected = false;
-                
             }
 
+            //Log packet as usual
             OutputPacketText("=======================================\n");
             OutputPacketText("WSASend() Sent Data : \n");
-        
             for (DWORD i = 0; i < dwBufferCount; ++i)
             {
                 const char* bufferContent = reinterpret_cast<const char*>(lpBuffers[i].buf);
@@ -166,8 +146,7 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
                 if (TranslateToAOB) {
                     // Print buffer content as an array of bytes
                     OutputPacketText("Buffer content (hex): ");
-                    for (DWORD j = 0; j < bufferLength; ++j)
-                    {
+                    for (DWORD j = 0; j < bufferLength; ++j){
                         char hex[4];
                         if (bufferContent[j] == 'G' && bufferContent[j + 1] == 'G') {
                             sprintf_s(hex, "%02X ", 0);  // Replace "GG" with null byte
@@ -179,23 +158,21 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
                         OutputPacketText(hex);
                     }
                 }
-
-                else
-                {
+                else{
                     OutputPacketText("Buffer : \n");
                     OutputPacketText(bufferContent);
                 }
             }
 
             OutputPacketText("\n");
-
         } 
     }
-
-
     if (BlockPacketToggle == false) {
-       return pWsaSend(s, lpBuffers, dwBufferCount, lpNumberOfBytesSent, dwFlags, lpOverlapped, lpCompletionRoutine);
+        //Send packet by injecting our packet into an existing packet
+        result = pWsaSend(s, lpBuffers, dwBufferCount, lpNumberOfBytesSent, dwFlags, lpOverlapped, lpCompletionRoutine);
+        return result;
     }
+
 }
 
 // For sendto() hook it to read the buffer and print it
@@ -441,7 +418,6 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 
 			}
 
-			
 			ImGui::Checkbox("Send", &SendToggle);
 			ImGui::Checkbox("SendTo", &SendToToggle);
 			ImGui::Checkbox("WSASend", &WSASendToggle);
