@@ -113,12 +113,11 @@ int WSAAPI MySend(SOCKET s, const char* buf, int len, int flags)
     int result;
     // Check if it's checked
     if (SendToggle == true && len >= FilterPacketSize) {
-        OutputPacketText("=======================================\n");
-        OutputPacketText("Send() Sent Data : \n");
+
 
         // Print buffer content as an array of bytes
         if (TranslateToAOB) {
-            OutputPacketText("Buffer content (hex): ");
+            OutputPacketText("Send() Packet (AOB): ");
             for (int i = 0; i < len; ++i)
             {
                 // Convert each byte to its hexadecimal representation
@@ -129,7 +128,7 @@ int WSAAPI MySend(SOCKET s, const char* buf, int len, int flags)
         }
         else
         {
-            OutputPacketText("Buffer : \n");
+            OutputPacketText("Send() Packet : ");
             OutputPacketText(buf);
         }
         OutputPacketText("\n");
@@ -154,45 +153,45 @@ int WSAAPI MySend(SOCKET s, const char* buf, int len, int flags)
 
 
 
-static char InjectedBuffer[5000] = "";
+static char InjectedBuffer[400] = "";
 int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD lpNumberOfBytesSent, LPDWORD dwFlags, LPWSAOVERLAPPED lpOverlapped, LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine) {
     if (WSASendToggle) {
+        // Check for packet injection
+        if (Injected && lpBuffers[0].len >= strlen(InjectedBuffer)) {
+            OutputPacketText("Found a packet to inject!\n");
+
+            // Replace the buffer with the injected packet
+            lpBuffers[0].len = strlen(InjectedBuffer);
+            lpBuffers[0].buf = InjectedBuffer;
+            OutputPacketText("Packet replaced successfully!\n");
+            OutputPacketText("New packet to be sent (AOB): ");
+            const char* bufferContent = reinterpret_cast<const char*>(lpBuffers[0].buf);
+            DWORD bufferLength = lpBuffers[0].len;
+            for (DWORD j = 0; j < bufferLength; ++j) {
+                char hex[4];
+                if (bufferContent[j] == '1' && bufferContent[j + 1] == '1') {
+                    sprintf_s(hex, "%02X ", 0);  // Replace "GG" with null byte
+                    j++; // Skip the next character ('G')
+                }
+                else {
+                    sprintf_s(hex, "%02X ", static_cast<unsigned char>(bufferContent[j]));
+                }
+                OutputPacketText(hex);
+            }
+
+            OutputPacketText("\n");
+            Injected = false;
+        }
+
         for (DWORD i = 0; i < dwBufferCount; i++) {
             if (lpBuffers[i].len >= FilterPacketSize) {
-                // Check for packet injection
-                if (Injected && lpBuffers[i].len >= strlen(InjectedBuffer)) {
-                    OutputPacketText("Found a packet to inject!\n");
-
-                    // Replace the buffer with the injected packet
-                    lpBuffers[i].len = strlen(InjectedBuffer);
-                    lpBuffers[i].buf = InjectedBuffer;
-                    OutputPacketText("Packet replaced successfully!\n");
-                    OutputPacketText("New packet to be sent (hex): ");
-                    const char* bufferContent = reinterpret_cast<const char*>(lpBuffers[i].buf);
-                    DWORD bufferLength = lpBuffers[i].len;
-                    for (DWORD j = 0; j < bufferLength; ++j) {
-                        char hex[4];
-                        if (bufferContent[j] == '1' && bufferContent[j + 1] == '1') {
-                            sprintf_s(hex, "%02X ", 0);  // Replace "GG" with null byte
-                            j++; // Skip the next character ('G')
-                        }
-                        else {
-                            sprintf_s(hex, "%02X ", static_cast<unsigned char>(bufferContent[j]));
-                        }
-                        OutputPacketText(hex);
-                    }
-                    
-                    OutputPacketText("\n");
-                    Injected = false;
-                }
-
                 for (DWORD i = 0; i < dwBufferCount; ++i)
                 {
                     const char* bufferContent = reinterpret_cast<const char*>(lpBuffers[i].buf);
                     DWORD bufferLength = lpBuffers[i].len;
                     if (TranslateToAOB) {
                         // Print buffer content as an array of bytes
-                        OutputPacketText("Buffer content (hex): ");
+                        OutputPacketText("WSASend() Packet (AOB): ");
                         for (DWORD j = 0; j < bufferLength; ++j) {
                             char hex[4];
                             if (bufferContent[j] == '1' && bufferContent[j + 1] == '1') {
@@ -206,7 +205,7 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
                         }
                     }
                     else {
-                        OutputPacketText("Buffer : \n");
+                        OutputPacketText("WSASend() Packet : ");
                         OutputPacketText(bufferContent);
                     }
                 }
@@ -260,11 +259,9 @@ int WSAAPI MySendTo(SOCKET s, const char* buf, int len, int flags, const struct 
 
         if (true)
         {
-            OutputPacketText("SendTo() Sent Data (hex): \n");
-
             // Print buffer content as an array of bytes
             if (TranslateToAOB) {
-                OutputPacketText("Buffer content (hex): \n");
+                OutputPacketText("SendTo() Packet (AOB): ");
                 for (int i = 0; i < len; ++i)
                 {
                     // Convert each byte to its hexadecimal representation
@@ -275,7 +272,7 @@ int WSAAPI MySendTo(SOCKET s, const char* buf, int len, int flags, const struct 
             }
             else
             {
-                OutputPacketText("Buffer : \n");
+                OutputPacketText("SendTo() Packet : ");
                 OutputPacketText(buf);
             }
             OutputPacketText("\n");
@@ -326,7 +323,6 @@ int WSAAPI MyGetAddrinfo(PCSTR Host, PCSTR port, const ADDRINFOA* pHints, PADDRI
 {
     OutputPacketText("Host : ");
     OutputPacketText((const char*)Host);
-    OutputPacketText("\n");
     OutputPacketText("Port : ");
     OutputPacketText((const char*)port);
     OutputPacketText("\n");
@@ -375,7 +371,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 
     ImGui::SetNextWindowSize(ImVec2(500, 350));
 
-    if (ImGui::Begin("Packet logger by Discord : accesslist", NULL, ImGuiWindowFlags_NoResize)) {
+    if (ImGui::Begin("Packet logger by (Rainbot) ,  Discord : accesslist", NULL, ImGuiWindowFlags_NoResize)) {
         //Output packet
         if (ImGui::TreeNode("Output packets")) {
 
@@ -402,7 +398,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 
                 //////////////////////////////WSASEND////////////////////////////////////
                 if (WSASendToggle) {
-                    char TempPacket[50000];
+                    char TempPacket[5000];
                     strcpy(TempPacket, Input);//We take our input and we put in out TempPacket
 
                     if (TranslateToAOB) {
