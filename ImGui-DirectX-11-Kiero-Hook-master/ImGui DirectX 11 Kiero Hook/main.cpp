@@ -71,8 +71,8 @@ ID3D11DeviceContext* pContext = NULL;
 ID3D11RenderTargetView* mainRenderTargetView;
 
 // Input and Output buffers
-static char Input[10000] = "Enter your packet here :p";;
-static char Output[10000] = "Packets will be displayed here :p";
+static char Input[1000000] = "Enter your packet here :p";;
+static char Output[1000000] = "Packets will be displayed here :p";
 
 
 //Toggles
@@ -152,18 +152,30 @@ int WSAAPI MySend(SOCKET s, const char* buf, int len, int flags)
 
 
 
-
+static size_t InjectedBufferLength = 0;  // Track the actual length of the injected packet
 static char InjectedBuffer[400] = "";
+
 int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD lpNumberOfBytesSent, LPDWORD dwFlags, LPWSAOVERLAPPED lpOverlapped, LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine) {
+    int result = 0;
+
     if (WSASendToggle) {
-        // Check for packet injection
-        if (Injected && lpBuffers[0].len >= strlen(InjectedBuffer)) {
+        if (Injected && InjectedBufferLength > 0 && lpBuffers[0].len >= InjectedBufferLength) {
             OutputPacketText("Found a packet to inject!\n");
 
             // Replace the buffer with the injected packet
-            lpBuffers[0].len = strlen(InjectedBuffer);
+            lpBuffers[0].len = InjectedBufferLength;
             lpBuffers[0].buf = InjectedBuffer;
             OutputPacketText("Packet replaced successfully!\n");
+
+            // Debugging: print the injected buffer length
+            char sizeDebug[50];
+            sprintf_s(sizeDebug, "Injected packet length: %zu\n", InjectedBufferLength);
+            OutputPacketText(sizeDebug);
+
+            // Debugging: print the packet size before sending
+            sprintf_s(sizeDebug, "New packet to be sent, size: %u\n", lpBuffers[0].len);
+            OutputPacketText(sizeDebug);
+
             OutputPacketText("New packet to be sent (AOB): ");
             const char* bufferContent = reinterpret_cast<const char*>(lpBuffers[0].buf);
             DWORD bufferLength = lpBuffers[0].len;
@@ -178,38 +190,41 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
                 }
                 OutputPacketText(hex);
             }
-
             OutputPacketText("\n");
             Injected = false;
         }
 
+        // Debugging the size of the packets being sent
         for (DWORD i = 0; i < dwBufferCount; i++) {
             if (lpBuffers[i].len >= FilterPacketSize) {
-                for (DWORD i = 0; i < dwBufferCount; ++i)
-                {
-                    const char* bufferContent = reinterpret_cast<const char*>(lpBuffers[i].buf);
-                    DWORD bufferLength = lpBuffers[i].len;
-                    if (TranslateToAOB) {
-                        // Print buffer content as an array of bytes
-                        OutputPacketText("WSASend() Packet (AOB): ");
-                        for (DWORD j = 0; j < bufferLength; ++j) {
-                            char hex[4];
-                            if (bufferContent[j] == '1' && bufferContent[j + 1] == '1') {
-                                sprintf_s(hex, "%02X ", 0);  // Replace "GG" with null byte
-                                j++; // Skip the next character ('G')
-                            }
-                            else {
-                                sprintf_s(hex, "%02X ", static_cast<unsigned char>(bufferContent[j]));
-                            }
-                            OutputPacketText(hex);
+                const char* bufferContent = reinterpret_cast<const char*>(lpBuffers[i].buf);
+                DWORD bufferLength = lpBuffers[i].len;
+
+                if (TranslateToAOB) {
+                    // Print buffer content as an array of bytes
+                    OutputPacketText("WSASend() Packet (AOB): ");
+
+                    // Debugging: print the size of the current buffer
+                    char sizeDebug[50];
+                    sprintf_s(sizeDebug, "Packet size: %u\n", bufferLength);
+                    OutputPacketText(sizeDebug);
+
+                    for (DWORD j = 0; j < bufferLength; ++j) {
+                        char hex[4];
+                        if (bufferContent[j] == '1' && bufferContent[j + 1] == '1') {
+                            sprintf_s(hex, "%02X ", 0);  // Replace "GG" with null byte
+                            j++; // Skip the next character ('G')
                         }
-                    }
-                    else {
-                        OutputPacketText("WSASend() Packet : ");
-                        OutputPacketText(bufferContent);
+                        else {
+                            sprintf_s(hex, "%02X ", static_cast<unsigned char>(bufferContent[j]));
+                        }
+                        OutputPacketText(hex);
                     }
                 }
-
+                else {
+                    OutputPacketText("WSASend() Packet : ");
+                    OutputPacketText(bufferContent);
+                }
                 OutputPacketText("\n");
             }
         }
@@ -217,9 +232,18 @@ int WSAAPI MyWSASend(SOCKET s, LPWSABUF lpBuffers, DWORD dwBufferCount, LPDWORD 
 
     // Call original WSASend if packets are not blocked
     if (!BlockPacketToggle) {
-        return pWsaSend(s, lpBuffers, dwBufferCount, lpNumberOfBytesSent, dwFlags, lpOverlapped, lpCompletionRoutine);
+        result = pWsaSend(s, lpBuffers, dwBufferCount, lpNumberOfBytesSent, dwFlags, lpOverlapped, lpCompletionRoutine);
+        if (result != 0) {
+            int error = WSAGetLastError();  // Get the error code
+            char errorMsg[256];
+            sprintf_s(errorMsg, "WSASend failed with error: %d\n", error);
+            OutputPacketText(errorMsg);
+        }
+
+        return result;
     }
-    return 0;  // If packets are blocked, return 0
+
+    return 0;
 }
 
 
@@ -246,7 +270,6 @@ int WSAAPI MySendTo(SOCKET s, const char* buf, int len, int flags, const struct 
 
     // Check if it's checked
     if (SendToToggle == true && len >= FilterPacketSize) {
-        OutputPacketText("=======================================\n");
         // Extracting the IP and port of the receiver
         const sockaddr_in* clientService = reinterpret_cast<const sockaddr_in*>(to);
         unsigned long ipAddress = clientService->sin_addr.s_addr;
@@ -323,6 +346,7 @@ int WSAAPI MyGetAddrinfo(PCSTR Host, PCSTR port, const ADDRINFOA* pHints, PADDRI
 {
     OutputPacketText("Host : ");
     OutputPacketText((const char*)Host);
+    OutputPacketText("  ");
     OutputPacketText("Port : ");
     OutputPacketText((const char*)port);
     OutputPacketText("\n");
@@ -399,7 +423,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
                 //////////////////////////////WSASEND////////////////////////////////////
                 if (WSASendToggle) {
                     char TempPacket[5000];
-                    strcpy(TempPacket, Input);//We take our input and we put in out TempPacket
+                    strcpy(TempPacket, Input);  // We take our input and put it into TempPacket
 
                     if (TranslateToAOB) {
                         std::string inputText(TempPacket);
@@ -408,7 +432,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
                         for (size_t i = 0; i < inputText.length(); i += 2) {
                             std::string hexValue = inputText.substr(i, 2);
                             if (hexValue == "00") {
-                                asciiText += "11";  // Replace null byte with "GG"
+                                asciiText += "11";
                             }
                             else {
                                 char asciiChar = static_cast<char>(std::stoi(hexValue, nullptr, 16));
@@ -416,8 +440,9 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
                             }
                         }
                         const char* finaltest = asciiText.c_str();
-                        strcpy(InjectedBuffer, finaltest); // Injection
-                        OutputPacketText("Injected packet successfully !\n");
+                        InjectedBufferLength = inputText.length() / 2;  // This should hold the correct size in bytes.
+                        memcpy(InjectedBuffer, finaltest, InjectedBufferLength);  // Use memcpy to copy the binary data
+                        OutputPacketText("Injected packet successfully!\n");
                     }
                     Injected = true;
                 }
@@ -540,8 +565,7 @@ BOOL WINAPI DllMain(HMODULE hMod, DWORD dwReason, LPVOID lpReserved)
     switch (dwReason)
     {
     case DLL_PROCESS_ATTACH:
-        myhmod = hMod;
-        DisableThreadLibraryCalls(myhmod);
+
         DetourRestoreAfterWith();
         DetourTransactionBegin();
         DetourUpdateThread(GetCurrentThread());
@@ -553,7 +577,9 @@ BOOL WINAPI DllMain(HMODULE hMod, DWORD dwReason, LPVOID lpReserved)
         DetourAttach(&(PVOID&)pGetAddrInfo, (PVOID)MyGetAddrinfo);
 
         DetourTransactionCommit();
-        CreateThread(nullptr, 0, MainThread, myhmod, 0, nullptr);
+
+
+        CreateThread(nullptr, 0, MainThread, NULL, 0, nullptr);
         
         break;
     case DLL_PROCESS_DETACH:
